@@ -9,7 +9,7 @@
 
 import Foundation
 import CoreGraphics
-import SwiftUI
+@_exported import SwiftUI
 
 #if os(iOS)
 import UIKit
@@ -71,4 +71,3 @@ extension Color: Codable {
         try container.encode(colorComponents.alpha, forKey: .alpha)
     }
 }
-
