@@ -1,8 +1,8 @@
 //
 //  Color+Extension.swift
 //
-//
-//  Created by nori on 2022/03/13.
+//  https://twitter.com/brunowernimont
+//  http://brunowernimont.me/howtos/make-swiftui-color-codable
 //
 
 import Foundation
