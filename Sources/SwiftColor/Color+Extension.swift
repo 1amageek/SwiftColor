@@ -33,7 +33,9 @@ fileprivate extension Color {
         var a: CGFloat = 0
         
         #if os(macOS)
-        SystemColor(self).getRed(&r, green: &g, blue: &b, alpha: &a)
+        if let convertedColor = SystemColor(self).usingColorSpace(.sRGB) {
+            convertedColor.getRed(&r, green: &g, blue: &b, alpha: &a)
+        }
         // Note that non RGB color will raise an exception, that I don't now how to catch because it is an Objc exception.
         #else
         guard SystemColor(self).getRed(&r, green: &g, blue: &b, alpha: &a) else {
